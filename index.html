@@ -41,7 +41,7 @@
         .logo {
             opacity: 0;
             animation: fadeIn 2s forwards;
-            max-width: 300px; /* Doubled size of the logo */
+            max-width: 300px;
             margin: 30px auto 30px;
             display: block;
         }
@@ -51,52 +51,52 @@
             to { opacity: 1; }
         }
 
-        /* Positioned text for "COMING 2025" with slightly reduced size */
+        /* Positioned text for "COMING 2025" */
         .coming-container {
             position: absolute;
             top: 20px;
-            left: 10px; /* Closer to the left edge */
+            left: 10px;
             text-align: left;
-            font-weight: 500; /* Set "COMING 2025" to Medium */
+            font-weight: 500;
         }
 
-        .coming-container h1 {
-            font-size: 4.8em; /* Reduced size by 20% */
-            margin: 0;
-            line-height: 1;
-        }
-
-        .coming-container h2 {
-            font-size: 4.5em; /* Reduced size by 20% */
+        .coming-container h1, .coming-container h2 {
+            font-size: 4em;
             margin: 0;
             line-height: 1;
         }
 
         /* Main content styling */
         .content {
-            margin-top: 120px; /* Position text relative to 2025 */
-            padding-left: 230px; /* Aligned beside "2025" */
-            padding-right: 10px; /* Reduziere diesen Wert, um den Kasten nach rechts zu erweitern */
-            max-width: 100%; /* Setze eine Maximalbreite je nach gewünschter Breite */
-            text-align: left; /* Left-aligned text */
-            font-weight: 300; /* Roboto Light for main text */
-            font-size: 0.9em; /* Match size of address text */
+            margin-top: 120px;
+            padding-left: 230px;
+            padding-right: 10px;
+            max-width: 100%;
+            text-align: left;
+            font-weight: 300;
+            font-size: 0.9em;
         }
 
         .content p {
-            margin-bottom: 0px; /* Reduced spacing between paragraphs */
+            margin-bottom: 0px;
         }
 
         .address {
             margin-top: 30px;
-            font-size: 0.9em; /* Ensuring size match with main content text */
+            font-size: 0.9em;
             text-align: center;
         }
 
-        /* Responsive Layouts */
-        @media (min-width: 600px) {
+        /* Responsive Layout */
+        @media (max-width: 600px) {
             .content {
-                font-size: 0.9em;
+                margin-top: 20px;
+                padding-left: 0;
+                text-align: center;
+            }
+            .coming-container {
+                position: static;
+                text-align: center;
             }
         }
     </style>
