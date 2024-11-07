@@ -1,45 +1,136 @@
+
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>The Tischlerei</title>
     <style>
+        /* Import Roboto Light and Medium fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set body font and color */
         body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300; /* Default to Roboto Light */
+            background-color: #000; /* Black background */
+            color: #f7f5f2; /* Light text color */
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #000;
-            color: #fff;
         }
-        .coming-soon {
+
+        /* Container */
+        .container {
+            padding: 20px;
+            position: relative;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Fading Logo */
+        .logo {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            max-width: 300px; /* Doubled size of the logo */
+            margin: 30px auto 30px;
+            display: block;
+        }
+
+        /* Keyframes for logo fade-in */
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Positioned text for "COMING 2025" with slightly reduced size */
+        .coming-container {
+            position: absolute;
+            top: 20px;
+            left: 10px; /* Closer to the left edge */
+            text-align: left;
+            font-weight: 500; /* Set "COMING 2025" to Medium */
+        }
+
+        .coming-container h1 {
+            font-size: 4.8em; /* Reduced size by 20% */
+            margin: 0;
+            line-height: 1;
+        }
+
+        .coming-container h2 {
+            font-size: 4.5em; /* Reduced size by 20% */
+            margin: 0;
+            line-height: 1;
+        }
+
+        /* Main content styling */
+        .content {
+            margin-top: 120px; /* Position text relative to 2025 */
+            padding-left: 230px; /* Aligned beside "2025" */
+            padding-right: 10px; /* Reduziere diesen Wert, um den Kasten nach rechts zu erweitern */
+            max-width: 100%; /* Setze eine Maximalbreite je nach gewünschter Breite */
+            text-align: left; /* Left-aligned text */
+            font-weight: 300; /* Roboto Light for main text */
+            font-size: 0.9em; /* Match size of address text */
+        }
+
+        .content p {
+            margin-bottom: 0px; /* Reduced spacing between paragraphs */
+        }
+
+        .address {
+            margin-top: 30px;
+            font-size: 0.9em; /* Ensuring size match with main content text */
             text-align: center;
         }
-        .coming-soon img {
-            max-width: 200px;
-            margin-bottom: 20px;
-        }
-        .coming-soon h1 {
-            font-size: 2.5rem;
-            font-weight: 100;
-            margin-bottom: 10px;
-        }
-        .coming-soon p {
-            font-size: 1.2rem;
-            font-weight: 300;
+
+        /* Responsive Layouts */
+        @media (min-width: 600px) {
+            .content {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="coming-soon">
-        <!-- Embedding the SVG logo directly for simplicity; this would typically be an <img> tag with the SVG file path. -->
-        <img src="Logo_the_tischlerei_neg_final_RGB.svg" alt="The Tischlerei Logo" width="200">
-        <h1>Unsere Webseite ist bald verfügbar</h1>
-        <p>Bleib gespannt!</p>
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- "COMING 2025" positioned top left -->
+        <div class="coming-container">
+            <h1>COMING</h1>
+            <h2>2025!</h2>
+        </div>
+
+        <!-- Main content text -->
+        <div class="content">
+            <p>Was kriegt man, wenn man einen Deutschen und einen Briten mit Holz arbeiten lässt?</p>
+            <p>Na klar: Richtig gute Möbel.</p><br/>
+            <p>Denn was klingt wie der Anfang von einem Witz, ist eigentlich der Anfang eines ganz besonderen Unternehmens. Das von Max und Nick, die in ihrer Werkstatt Handwerk, Design und Nachhaltigkeit zusammenbringen. Deutsche Präzision meets englische Originalität. Hochwertige, nachhaltige Materialien treffen auf Liebe zum Detail.</p><br/>
+            <p>Was dabei herauskommt? Eine richtig gute Tischlerei.</p>
+            <p>Nein. Nicht irgendeine. Diese Tischlerei.</p>
+        </div>
+
+        <!-- Logo positioned between content and address -->
+        <img src="Logo_the_tischlerei_neg_final_RGB.svg" alt="The Tischlerei Logo" class="logo">
+
+        <!-- Address with mailto link -->
+        <div class="address">
+            the tischlerei GmbH • hofstrasse 64, halle 18.06 • 40723 hilden • 
+            <a href="mailto:team@thetischlerei.de" style="color: #f7f5f2;">team@thetischlerei.de</a>
+        </div>
+
     </div>
+
 </body>
 </html>
